@@ -56,6 +56,7 @@ func (t *Token) Transfer(bc *BlockChain, from string, to string, amount float64)
 func (b *Block) MintToken(t *Token, bc *BlockChain) {
 	fmt.Println("Mining Token....")
 	targetBits := strings.Repeat("0", mintTargetBits)
+	b.Nonce = 0
 	for {
 		hash := b.calculateHash()
 		if strings.HasPrefix(hash, targetBits) {
@@ -67,6 +68,4 @@ func (b *Block) MintToken(t *Token, bc *BlockChain) {
 		}
 		b.Nonce++
 	}
-	targetBits = ""
-	return
 }
