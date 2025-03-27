@@ -13,4 +13,4 @@ A simple blockchain implemented in golang
 
 
 # Contribution Guide
-1. Native Go modules are most recommended 
+1. Native Go modules are most recommended.
